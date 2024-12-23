@@ -17,9 +17,6 @@ Route::get('/register', [PageController::class, 'register']);
 Route::get('/products', [PageController::class, 'data'])->name('products.data');
 
 
-
-
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
