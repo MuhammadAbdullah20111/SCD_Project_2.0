@@ -6,6 +6,11 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SearchController;
+
+// Route to handle AJAX search
+Route::get('/products/search', [SearchController::class, 'search'])->name('products.search');
+Route::get('/search', [SearchController::class, 'search'])->name('products.search');
 
 Route::get('/products', [ProductController::class, 'products']);
 Route::resource('product', ProductController::class);
@@ -16,6 +21,7 @@ Route::get('/about', [PageController::class, 'about']);
 Route::get('/contact', [PageController::class, 'contact']);
 Route::get('/products', [PageController::class, 'products']);
 Route::get('/login', [PageController::class, 'login']);
+
 Route::get('/register', [PageController::class, 'register']);
 Route::get('/products', [PageController::class, 'data'])->name('products.data');
 

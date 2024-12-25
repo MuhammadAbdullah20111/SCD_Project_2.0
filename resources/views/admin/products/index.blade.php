@@ -18,7 +18,7 @@
             @foreach($products as $product)
                 <tr>
                     <td>{{ $product->product_name }}</td>
-                    <td>{{ $product->brand }}</td>
+                    <td>{{ $product->brand->name }}</td>
                     <td>${{ $product->price }}</td>
                     <td class="actions">
                         <a href="{{ route('product.edit', $product->id) }}" class="edit">Edit</a>

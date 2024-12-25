@@ -7,7 +7,7 @@
     <header class="hero" id="home">
         <div class="hero-overlay">
             <div class="container text-center">
-                <h1 class="display-4">Welcome to Your Business Name</h1>
+                <h1 class="display-4">Welcome to Your SMART PHONE E-Commerce Store  </h1>
                 <p class="lead">Your One-Stop Solution for Quality Products and Services.</p>
                 <a href="{{ url('products') }}" class="btn btn-primary btn-lg">Explore Now</a>
             </div>

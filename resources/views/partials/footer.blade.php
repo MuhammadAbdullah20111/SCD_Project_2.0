@@ -16,9 +16,9 @@
                 </div>
                 <div class="col-md-4">
                     <h5>Contact Us</h5>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Business Street, City, Country</p>
-                    <p><i class="fas fa-phone"></i> +123-456-7890</p>
-                    <p><i class="fas fa-envelope"></i> contact@yourcompany.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Szabist karachi Pakistan</p>
+                    <p><i class="fas fa-phone"></i> +92-3161080924</p>
+                    <p><i class="fas fa-envelope"></i> m.abdullah.asif20111@gmail.com</p>
                     <h5>Follow Us</h5>
                     <div>
                         <a href="#" class="text-white mr-3"><i class="fab fa-facebook fa-lg"></i></a>
@@ -31,8 +31,8 @@
             
             <div class="row mt-4">
                 <div class="col-12 text-center">
-                    <p class="mb-0">&copy; 2023 Your Company. All rights reserved.</p>
-                    <p class="small">Designed with <i class="fas fa-heart text-danger"></i> by Your Team.</p>
+                    <p class="mb-0">&copy; 2025 SMART PHONE  All rights reserved.</p>
+                    <p class="small">Designed with <i class="fas fa-heart text-danger"></i> by Muhammad Abdullah.</p>
                 </div>
             </div>
         </div>

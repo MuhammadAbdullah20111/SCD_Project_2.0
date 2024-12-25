@@ -32,10 +32,10 @@ class AdminController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'product_name' => 'required',
-            'price' => 'required|numeric',
-            'brand' => 'required',
-            'picture' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+           'product_name' => 'required|string|max:255',
+        'brand' => 'required|string|max:255',
+        'price' => 'required|numeric|max:9999',
+        'picture' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
         $picturePath = null;
     if ($request->hasFile('picture')) {
