@@ -35,11 +35,22 @@ class AdminController extends Controller
             'product_name' => 'required',
             'price' => 'required|numeric',
             'brand' => 'required',
-            // 'picture' => 'nullable|url',
+            'picture' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
+        $picturePath = null;
+    if ($request->hasFile('picture')) {
+        // Store in public/images/products directory and save the path
+        $picturePath = $request->file('picture')->store('images/products', 'public');
+    }
 
-        Product::create($request->all());
-        return redirect()->route('product.index');
+    Product::create([
+        'product_name' => $validatedData['product_name'],
+        'brand' => $validatedData['brand'],
+        'price' => $validatedData['price'],
+        'picture' => $picturePath, // Store the path of the image
+    ]);
+
+    return redirect()->route('product.index')->with('success', 'Product added successfully.');
     }
 
     /**

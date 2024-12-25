@@ -13,10 +13,14 @@ return new class extends Migration
 {
     Schema::create('products', function (Blueprint $table) {
         $table->id(); 
-        $table->string('brand'); // Brand name
-        $table->string('product_name'); // Product name
-        $table->decimal('price', 8, 2); // Price with precision (8 digits total, 2 decimals)
-        $table->timestamps(); // Created_at and Updated_at columns
+        $table->string('product_name');
+        $table->decimal('price', 8, 2);
+        $table->unsignedBigInteger('brand_id'); // Foreign key to brands table
+        $table->string('picture')->nullable(); // To store image file paths
+        $table->timestamps();
+
+        // Add foreign key constraint
+        $table->foreign('brand_id')->references('id')->on('brands')->onDelete('cascade');
     });
 }
 

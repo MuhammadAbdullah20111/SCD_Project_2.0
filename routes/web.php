@@ -5,7 +5,10 @@ use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProductController;
 
+Route::get('/products', [ProductController::class, 'products']);
+Route::resource('product', ProductController::class);
 Route::resource('product',AdminController::class);
 
 Route::get('/', [PageController::class, 'index']);
