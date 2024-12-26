@@ -18,7 +18,12 @@ class product extends Model
     {
         return $this->belongsTo(Brand::class);
 
-        return $this->belongsTo(Brand::class, 'brand_id', 'id');
+         return $this->belongsTo(Brand::class, 'brand_id', 'id');
 
     }
+    public function index()
+{
+    $products = Product::with('brand')->get();
+    return view('your_view_name', compact('products'));
+}
 }

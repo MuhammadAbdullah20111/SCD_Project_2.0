@@ -14,11 +14,12 @@ class Brand extends Model
     protected $table = 'brands';
 
     // Define which attributes can be mass assigned
-    protected $fillable = [
-        'brand_name',
-        'created_at',
-        'updated_at',
-    ];
+    protected $fillable = ['name'];
+    // protected $fillable = [
+    //     'brand_name',
+    //     'created_at',
+    //     'updated_at',
+    // ];
 
     // If you're using timestamps, set this to true (Laravel does this by default)
     public $timestamps = true;
@@ -28,4 +29,9 @@ class Brand extends Model
     {
         return $this->hasMany(Product::class, 'brand_id'); // Assuming Product model exists and 'brand_id' is the foreign key
     }
+    public function create()
+{
+    $brands = Brand::all();
+    return view('your_view_name', compact('brands'));
+}
 }

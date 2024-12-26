@@ -24,6 +24,7 @@ class AdminController extends Controller
     public function create()
     {
         return view('admin.products.create');
+        
     }
 
     /**
@@ -31,8 +32,8 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-           'product_name' => 'required|string|max:255',
+       $validatedData = $request->validate([
+        'product_name' => 'required|string|max:255',
         'brand' => 'required|string|max:255',
         'price' => 'required|numeric|max:9999',
         'picture' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',

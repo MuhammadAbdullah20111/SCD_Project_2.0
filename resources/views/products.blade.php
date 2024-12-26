@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+
 <link rel="stylesheet" href="{{ asset('css/product.css') }}">
 <div class="container mt-5">
     <div class="row mb-4">
@@ -20,15 +21,16 @@
                 <option value="tecno">Tecno</option>
             </select>
         </div>
-        <div class="col-md-4">
-                <button type="submit" class="btn btn-primary">Search</button>
-            </div>
+        <div id="productGridContainer">
+        <!-- The product grid will be inserted here via AJAX -->
+        @include('partials.product_grid', ['products' => $products])
+    </div>
     </div>
     <div class="row row-cols-1 row-cols-md-3 g-4" id="productGrid">
     @foreach ($products as $product)
     <div class="col-md-4 col-sm-6 product-card mb-4" data-brand="{{ isset($product->brand) ? strtolower($product->brand->name) : 'unknown' }}">
         <div class="card h-100 shadow-sm">
-        <img src="{{ $product->picture ? asset('storage/' . $product->picture) : asset('images/Samsung Galaxy S23 Ultra.jpg') }}" class="card-img-top img-fluid" alt="{{ $product->product_name }}">
+        <img src="{{ $product->picture ? asset('storage/' . $product->picture) : asset('images/') }}" class="card-img-top img-fluid" alt="{{ $product->product_name }}">
         <div class="card-body d-flex flex-column">
                 <h5 class="card-title">{{ $product->product_name }}</h5>
                 <p class="card-text">${{ number_format($product->price, 2) }}</p>

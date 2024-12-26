@@ -1,8 +1,4 @@
-```php
-@extends('layouts.master')
-
-@section('content')
-    <div class="container mt-5">
+  <div class="container mt-5">
         <h3>Search Results</h3>
         <form action="{{ route('products.search') }}" method="GET" class="mb-4">
             <div class="row">
@@ -45,5 +41,3 @@
             @endif
         </div>
     </div>
-@endsection
-```

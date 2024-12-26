@@ -80,7 +80,7 @@ h1 {
 button.add-product {
     display: inline-block;
     background: linear-gradient(90deg, #4CAF50, #67C070);
-    color: white;
+    color: rgb(7, 159, 247);
     font-size: 16px;
     font-weight: 500;
     padding: 12px 20px;
