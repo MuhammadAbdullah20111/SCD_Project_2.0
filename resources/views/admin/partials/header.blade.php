@@ -12,10 +12,21 @@
             <h1>Admin Panel</h1>
         </div>
         <nav>
-            <ul>
-                <li><a href="{{ route('product.index')}}">All Product</a></li>
-                <li><a href="#">Reports</a></li>
-                <li><a href="#">Logout</a></li>
+    <ul class="nav-links">
+        <li><a href="{{ route('product.index') }}">All Products</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">{{ Auth::user()->name }}</a>
+            <ul class="dropdown-menu">
+                <li><a href="{{ route('profile.edit') }}">Profile</a></li>
+                <li>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="logout-btn">Logout</button>
+                    </form>
+                </li>
             </ul>
-        </nav>
+        </li>
+    </ul>
+</nav>
+
     </header>

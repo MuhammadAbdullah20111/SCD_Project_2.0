@@ -44,7 +44,7 @@
                         <div class="card-body">
                             <i class="fas fa-dollar-sign fa-3x mb-3"></i>
                             <h5 class="card-title">Affordable Prices</h5>
-                            <p class="card-text">Competitive pricing without compromising on quality.</p>
+                            <p class="card-text">Exceptional quality, sensibly priced.</p>
                             <a href="{{ url('products') }}" class="btn btn-secondary">Learn More</a>
                         </div>
                     </div>

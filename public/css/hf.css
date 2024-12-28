@@ -1,0 +1,183 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Navigation Styling */
+nav {
+    background-color: #333;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+/* Dropdown Menu */
+.dropdown .dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #444;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 10;
+    list-style: none;
+    min-width: 150px;
+}
+
+.dropdown .dropdown-menu li {
+    border-bottom: 1px solid #555;
+}
+
+.dropdown .dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown .dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown .dropdown-menu a:hover {
+    background-color: #4CAF50;
+}
+
+/* Logout Button Styling */
+.logout-btn {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+}
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+    border-top: 3px solid #4CAF50;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+footer .small {
+    font-size: 12px;
+    color: #ccc;
+}
+
+footer .small i {
+    color: #e74c3c; /* Red color for the heart icon */
+}
+
+footer .small a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer .small a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+    footer p {
+        font-size: 12px;
+    }
+
+    footer .small {
+        font-size: 10px;
+    }
+}

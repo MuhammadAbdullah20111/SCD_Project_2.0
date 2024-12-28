@@ -30,15 +30,32 @@
         </div>
 
         <!-- Brand Field -->
-        <div class="mb-3">
+        <!-- <div class="mb-3">
             <label for="brand" class="form-label">Brand</label>
-            <input type="text" name="brand" 
+            <input type="number" name="brand" 
                    class="form-control @error('brand') is-invalid @enderror" 
                    value="{{ old('brand') }}" required>
             @error('brand')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
-        </div>
+        </div> -->
+        <!-- Brand Field -->
+        <div class="mb-3">
+    <label for="brand_id" class="form-label">Brand</label>
+    <select name="brand_id" 
+            class="form-control @error('brand_id') is-invalid @enderror" 
+            required>
+        <option value="">Select a Brand</option>
+        @foreach($brands as $brand)
+            <option value="{{ $brand->id }}" {{ old('brand_id') == $brand->id ? 'selected' : '' }}>
+                {{ $brand->name }}
+            </option>
+        @endforeach
+    </select>
+    @error('brand_id')
+        <div class="invalid-feedback">{{ $message }}</div>
+    @enderror
+</div>
 
         <!-- Price Field -->
         <div class="mb-3">

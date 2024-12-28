@@ -19,6 +19,8 @@
                 <tr>
                     <td>{{ $product->product_name }}</td>
                     <td>{{ $product->brand?->name ?? 'No Brand' }}</td>
+                    <!-- <td>{{ $product->brand?->name }}</td> -->
+
                     <td>${{ $product->price }}</td>
                     <td class="actions">
                         <a href="{{ route('product.edit', $product->id) }}" class="edit">Edit</a>

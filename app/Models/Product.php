@@ -11,7 +11,7 @@ class product extends Model
 
     protected $table = 'products';
 
-    protected $fillable = ['brand_id', 'product_name', 'price','picture',];
+    protected $fillable = [ 'product_name', 'price','brand_id','picture',];
 
     // Relationship with Brand
     public function brand()
@@ -21,9 +21,5 @@ class product extends Model
          return $this->belongsTo(Brand::class, 'brand_id', 'id');
 
     }
-    public function index()
-{
-    $products = Product::with('brand')->get();
-    return view('your_view_name', compact('products'));
-}
+    
 }
