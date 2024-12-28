@@ -38,7 +38,7 @@ class AdminController extends Controller
             'product_name' => 'required|string|max:255',
             'brand_id' => 'required|exists:brands,id',
             'price' => 'required|numeric|max:9999',
-            'picture' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'picture' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             ]);
             $picturePath = null;
         if ($request->hasFile('picture')) {

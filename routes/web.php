@@ -9,6 +9,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SearchController;
 Route::post('/products', [ProductController::class, 'store'])->name('product.store');
 
+Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
 
 // Route to handle AJAX search
 Route::get('/search-products', [SearchController::class, 'searchProducts']);

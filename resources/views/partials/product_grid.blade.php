@@ -1,4 +1,5 @@
 <!-- resources/views/partials/product_grid.blade.php -->
+<link rel="stylesheet" href="{{ asset('css/product.css') }}">
 
 <div class="row row-cols-1 row-cols-md-3 g-4" id="productGrid">
     @foreach ($products as $product)
